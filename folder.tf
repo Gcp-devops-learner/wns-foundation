@@ -30,17 +30,9 @@ module "first_level_folder_stage" {
 
 module "first_level_folder_common" {
   source = "./modules/folder/"
-  // source = "terraform-google-modules/folders/google"
   folder_params = var.common_folder_name
   parent        = module.root_level_folder_triange.folders_map.fldr-gi.id
 
 }
-
-# module "folder_params" {
-#   source = "./modules/folder/"
-#   // source = "terraform-google-modules/folders/google"
-#   folder_params = var.names
-#   parent        = module.root_level_folder_triange.id //(don't change as parent folder_paramsis static)
-# }
 
 
