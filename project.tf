@@ -28,7 +28,7 @@ module "dev-project" {
 module "prod-project" {
   source         = "./modules/project/"
   org_id         = var.org_id
-  project_params = var.prod-project                                        // provide the org id here
+  project_params = var.prod-project                                       
   folder_id      = module.first_level_folder_prod.folders_map.fldr-prod.id //(don't change asfolder_id id is static)
   //folder_id       = var.folder_id
   billing_account = var.billing_account // provide the billing account id here
@@ -39,7 +39,6 @@ module "stage-project" {
   project_params = var.stage-project
   org_id         = var.org_id                                                // provide the org id here
   folder_id      = module.first_level_folder_stage.folders_map.fldr-stage.id //(don't change asfolder_id id is static)
-  //folder_id       = var.folder_id
   billing_account = var.billing_account // provide the billing account id here
 }
 
@@ -57,7 +56,6 @@ module "common-project-a" {
   project_params = var.common-project-a
   org_id         = var.org_id                                                  // provide the org id here
   folder_id      = module.first_level_folder_common.folders_map.fldr-common.id //(don't change asfolder_id id is static)
-  //folder_id       = var.folder_id
   billing_account = var.billing_account // provide the billing account id here
 
 }
@@ -67,7 +65,6 @@ module "common-project-b" {
   project_params = var.common-project-b
   org_id         = var.org_id                                                  // provide the org id here
   folder_id      = module.first_level_folder_common.folders_map.fldr-common.id //(don't change asfolder_id id is static)
-  //folder_id       = var.folder_id
   billing_account = var.billing_account // provide the billing account id here
 
 }
@@ -77,7 +74,6 @@ module "common-project-c" {
   project_params = var.common-project-c
   org_id         = var.org_id                                                  // provide the org id here
   folder_id      = module.first_level_folder_common.folders_map.fldr-common.id //(don't change asfolder_id id is static)
-  //folder_id       = var.folder_id
   billing_account = var.billing_account // provide the billing account id here
 
 }
